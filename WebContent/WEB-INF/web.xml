@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns="http://java.sun.com/xml/ns/javaee" 
+		xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+		http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+		id="WebApp_ID" version="3.0">
+
+	<display-name>MutualFundWebApp</display-name>
+	
+	<description>
+		Configuration file for the Mutual Fund Web App
+	</description>
+	<servlet>
+		<servlet-name>    Task7-controller        </servlet-name>
+		<servlet-class>   controller.Controller   </servlet-class>
+		<init-param>
+			<param-name>    jdbcDriverName          </param-name> 
+			<param-value>   com.mysql.jdbc.Driver   </param-value>
+		</init-param>
+		<init-param>
+			<param-name>    jdbcURL                 </param-name> 
+			<param-value>   jdbc:mysql:///task7    </param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+        <servlet-name>  Task7-controller         </servlet-name>
+        <url-pattern>    *.do                     </url-pattern>
+    </servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>   Task7-controller         </servlet-name>
+		<url-pattern>    /start                </url-pattern>
+    </servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>
